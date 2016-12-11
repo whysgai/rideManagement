@@ -11,7 +11,7 @@ Author: Will Cohen
 
 /* Box Model Hack */
 * {
-    border: thin solid black;
+     /*border: thin solid black;*/
      -moz-box-sizing: border-box; /* Firexfox */
      -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
      box-sizing: border-box; /* IE */
@@ -44,12 +44,22 @@ Author: Will Cohen
 /******************************************
 /* BASE STYLES
 /*******************************************/
+html {
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
      color: #000;
      font-size: 10px;
      line-height: 1.4;
-     font-family: Helvetica, Arial, sans-serif;
+     font-family: "Work Sans", Helvetica, Arial, sans-serif;
 }
+
+
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -59,19 +69,19 @@ body {
 	width: 960px;
 	margin: auto;
 }
-header, footer, .formRow{
-  width: 99%;
-  margin: 0 .5%;
+header, footer, .formRow {
+  width: 98%;
+  margin: 0 1%;
 }
 aside, section {
-  margin: 0 .5%;
+  margin: 0 1%;
 }
 aside, .formRow label {
   width: 33%;
   display: inline-block;
 }
 section, .formRow input {
-  width: 65%;
+  width: 63%;
 }
 /******************************************
 /* ADDITIONAL STYLES
@@ -81,7 +91,35 @@ section, .formRow input {
   margin-bottom: 1rem;
   box-shadow: .5px .5px 1px black;
 }
-
 .formRow label{
+ font-size: 1.05rem;
+}
+.formRow input{
+  padding: .25rem 0;
+}
+.formRow {
+  margin-bottom: .5rem;
+  padding-left: 1.5%;
+}
+.titleFont{
+  font-weight: 400;
+  font: "Lato", sans-serif;
+  margin: .25rem;
+  text-transform: uppercase;;
+}
+ul li {
+  font-size: 1.05rem;
 
+}
+ul {
+  /*list-style-image: url(../images/rideCar.png);*/
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3 {
+  font-size: 1.25rem;
 }

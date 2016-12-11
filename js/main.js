@@ -29,6 +29,7 @@ function displayRide(ride){
 
 function showRides(event){
   event.preventDefault();
+  $("#rideList").empty();
   $.each(rideList, function(index, value){
     displayRide(value);
   });
