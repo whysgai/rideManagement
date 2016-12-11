@@ -14,12 +14,12 @@
 	</head>
 	<body>
 		<div id="container">
-			<header>
+			<header class="card">
 				<h1>Blank Template</h1>
 				<h2>Just another blank template</h2>
 			</header>
 			<body>
-				<aside class="clearfix alignleft">
+				<aside class="clearfix alignleft card">
 					<p>This is where the form goes.</p>
 					<form>
 						<div class="formRow">
@@ -32,21 +32,29 @@
 						</div> <!--formRow2-->
 						<div class="formRow">
 							<label for="ridePpl">Number of Riders</label>
-							<input type="text" id="ridePpl"></input>
+							<input type="number" id="ridePpl"></input>
 						</div> <!--formRow3-->
 						<div class="formRow">
 							<label for="rideLvl">Ride Level</label>
-							<input type="text" id="rideLvl"></input>
+							<input type="number" id="rideLvl"></input>
 						</div> <!--formRow4-->
+						<div class="formRow">
+							<button id="rideAdd">Add Ride</button>
+							<button id="rideShow">Display All Rides</button>
+						</div>
+						<div class="formRow">
+							<button id="rideRemove">Remove Last Ride</button>
+							<button id="rideClear">Clear All Rides</button>
+						</div>
 					</form>
 				</aside>
-				<section class="clearfix alignleft">
+				<section class="clearfix alignleft card">
 					<p>This is where rides are displayed.</p>
-					<ul>
+					<ul id="rideList">
 					</ul>
 				</section>
 			</body>
-			<footer class="clear">
+			<footer class="clear card">
 				&copy; Footer Goes Here
 			</footer>
 		</div><!-- #container -->

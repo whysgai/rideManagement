@@ -46,7 +46,7 @@ Author: Will Cohen
 /*******************************************/
 body {
      color: #000;
-     font-size: 12px;
+     font-size: 10px;
      line-height: 1.4;
      font-family: Helvetica, Arial, sans-serif;
 }
@@ -76,6 +76,12 @@ section, .formRow input {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-.formRow {
+.card {
+  background: rgba(252, 249, 254, 1);
+  margin-bottom: 1rem;
+  box-shadow: .5px .5px 1px black;
+}
+
+.formRow label{
 
 }
