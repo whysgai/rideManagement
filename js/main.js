@@ -51,21 +51,25 @@ function clearRides(event){
   $("#rideLast").empty();
   $("#rideList").empty().append("<li>No rides are currently operating.</li>");
   rideList = [];
+  localStorage.removeItem("saved");
 }
 
 function save(event){
   event.preventDefault();
   // Put the object into storage
-  localStorage.setItem('test', JSON.stringify(rideList));
+  localStorage.setItem("saved", JSON.stringify(rideList));
   // Retrieve the object from storage
   // var retrievedObject = localStorage.getItem('test');
   // console.log('retrievedObject: ', JSON.parse(retrievedObject));
-  var retrievedObject = JSON.parse(localStorage.getItem('test'));
-  console.log(retrievedObject[0].name);
-
 }
 
 $(document).ready(function(){
+  //load from storage
+  if (localStorage.getItem("saved") != null && localStorage.getItem("saved") != undefined){
+    //console.log(localStorage.getItem("saved"));
+    rideList = JSON.parse(localStorage.getItem("saved"));
+  }
+  //buttons
   $("#rideAdd").on("click", function(event){addRide(event)});
   $("#rideShow").on("click", function(event){showRides(event)});
   $("#rideRemove").on("click", function(event){removeRide(event)});
