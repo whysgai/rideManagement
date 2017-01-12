@@ -1,5 +1,13 @@
 var rideList = [];
+//store in local storage, not just an array
 
+function storage(){
+  // Put the object into storage
+  localStorage.setItem('test', JSON.stringify(rideList));
+  // Retrieve the object from storage
+  var retrievedObject = localStorage.getItem('test');
+  console.log('retrievedObject: ', JSON.parse(retrievedObject));
+}
 
 //Ride Constructor
 function Ride (name,color,riders,level) {

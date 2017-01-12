@@ -19,50 +19,49 @@
 				<h1 class="titleFont">Ride Management</h1>
 				<h2 class="titleFont">View currently operating attractions</h2>
 			</header>
-			<body>
-				<aside class="clearfix alignleft card">
-					<h3 class="titleFont">Enter Ride Information:</h3>
-					<form>
-						<div class="formRow">
-							<label for="rideName">Ride Name</label>
-							<input type="text" id="rideName"></input>
-						</div> <!--formRow1-->
-						<div class="formRow">
-							<label for="rideColor">Ride Color</label>
-							<input type="text" id="rideColor"></input>
-						</div> <!--formRow2-->
-						<div class="formRow">
-							<label for="ridePpl">Num. Riders</label>
-							<input type="number" id="ridePpl"></input>
-						</div> <!--formRow3-->
-						<div class="formRow">
-							<label for="rideLvl">Ride Level</label>
-							<input type="number" id="rideLvl"></input>
-						</div> <!--formRow4-->
-						<div class="formRow">
-							<a id="rideAdd" class="button" href="#">Add Ride</a>
-							<a id="rideShow" class="button" href="#">Display All Rides</a>
-						</div>
-						<div class="formRow">
-							<a id="rideRemove" class="button" href="#">Remove Last Ride</a>
-							<a id="rideClear" class="button" href="#">Clear All Rides</a>
-						</div>
-					</form>
-				</aside>
-				<section class="clearfix alignleft">
-					<div class="card">
-						<h3 class="titleFont">Recent Ride</h3>
-						<ul id="rideLast">
-						</ul>
+			<aside class="clearfix alignleft card">
+				<h3 class="titleFont">Enter Ride Information:</h3>
+				<form>
+					<div class="formRow">
+						<label for="rideName">Ride Name</label>
+						<input type="text" id="rideName"></input>
+					</div> <!--formRow1-->
+					<div class="formRow">
+						<label for="rideColor">Ride Color</label>
+						<input type="text" id="rideColor"></input>
+					</div> <!--formRow2-->
+					<div class="formRow">
+						<label for="ridePpl">Num. Riders</label>
+						<input type="number" id="ridePpl"></input>
+					</div> <!--formRow3-->
+					<div class="formRow">
+						<label for="rideLvl">Ride Level</label>
+						<input type="number" id="rideLvl"></input>
+					</div> <!--formRow4-->
+					<div class="formRow">
+						<a id="rideAdd" class="button" href="#">Add Ride</a>
+						<a id="rideShow" class="button" href="#">Display All Rides</a>
 					</div>
-					<div class="card">
-						<h3 class="titleFont">Current Rides</h3>
-						<ul id="rideList">
-							<li>No rides are currently operating.</li>
-						</ul>
+					<div class="formRow">
+						<a id="rideRemove" class="button" href="#">Remove Last Ride</a>
+						<a id="rideClear" class="button" href="#">Clear All Rides</a>
 					</div>
-				</section>
-			</body>
+				</form>
+			</aside>
+			<section class="clearfix alignleft">
+				<div class="card">
+					<h3 class="titleFont">Recent Ride</h3>
+					<ul id="rideLast">
+					</ul>
+				</div>
+				<div class="card">
+					<h3 class="titleFont">Current Rides</h3>
+					<ul id="rideList">
+						<li>No rides are currently operating.</li>
+					</ul>
+				</div>
+			</section>
+
 			<footer class="clear card">
 				&copy; Footer Goes Here
 			</footer>

@@ -51,7 +51,6 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-
 body {
      color: #000;
      font-size: 10px;
@@ -121,7 +120,6 @@ section, .formRow input {
 }
 ul li {
   font-size: 1.05rem;
-
 }
 h1 {
   font-size: 2.5rem;
