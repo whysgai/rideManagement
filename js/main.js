@@ -1,13 +1,8 @@
 var rideList = [];
+var saveList = 0;
 //store in local storage, not just an array
 
-function storage(){
-  // Put the object into storage
-  localStorage.setItem('test', JSON.stringify(rideList));
-  // Retrieve the object from storage
-  var retrievedObject = localStorage.getItem('test');
-  console.log('retrievedObject: ', JSON.parse(retrievedObject));
-}
+
 
 //Ride Constructor
 function Ride (name,color,riders,level) {
@@ -58,10 +53,22 @@ function clearRides(event){
   rideList = [];
 }
 
+function save(event){
+  event.preventDefault();
+  // Put the object into storage
+  localStorage.setItem('test', JSON.stringify(rideList));
+  // Retrieve the object from storage
+  // var retrievedObject = localStorage.getItem('test');
+  // console.log('retrievedObject: ', JSON.parse(retrievedObject));
+  var retrievedObject = JSON.parse(localStorage.getItem('test'));
+  console.log(retrievedObject[0].name);
+
+}
 
 $(document).ready(function(){
   $("#rideAdd").on("click", function(event){addRide(event)});
   $("#rideShow").on("click", function(event){showRides(event)});
   $("#rideRemove").on("click", function(event){removeRide(event)});
   $("#rideClear").on("click", function(event){clearRides(event)});
+  $("#localStorage").on("click", function(event){save(event)});
 });
