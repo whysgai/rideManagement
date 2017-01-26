@@ -1,8 +1,4 @@
 var rideList = [];
-var saveList = 0;
-//store in local storage, not just an array
-
-
 
 //Ride Constructor
 function Ride (name,color,riders,level) {
@@ -58,15 +54,12 @@ function save(event){
   event.preventDefault();
   // Put the object into storage
   localStorage.setItem("saved", JSON.stringify(rideList));
-  // Retrieve the object from storage
-  // var retrievedObject = localStorage.getItem('test');
-  // console.log('retrievedObject: ', JSON.parse(retrievedObject));
 }
 
 $(document).ready(function(){
   //load from storage
   if (localStorage.getItem("saved") != null && localStorage.getItem("saved") != undefined){
-    //console.log(localStorage.getItem("saved"));
+    //set local storage to rideList
     rideList = JSON.parse(localStorage.getItem("saved"));
   }
   //buttons
